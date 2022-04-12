@@ -19,6 +19,15 @@ const onNewWorkout = function (event) {
     .catch(() => workoutsUi.onNewWorkoutFailure())
 }
 
+const onIndexWorkouts = function (event) {
+  event.preventDefault()
+  console.log('i am dying')
+
+  // api call
+  workoutsApi.indexWorkouts().then(() => workoutsUi.onIndexGameSuccess())
+}
+
 module.exports = {
-  onNewWorkout
+  onNewWorkout,
+  onIndexWorkouts
 }

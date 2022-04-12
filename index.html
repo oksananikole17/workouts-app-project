@@ -28,6 +28,31 @@
         <input name="credentials[password]" type="password" placeholder="Password">
         <button type="submit">Sign In</button>
       </form>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+          Change Password
+        </button>
+        
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Change Your Password</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <form id="password-form">
+                  <input name="passwords[old]" type="password" placeholder="Old Password">
+                  <input name="passwords[new]" type="password" placeholder="New Password">
+        
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary">Change Password</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
       <sec id="workout-home">
         <h5>Log a New Workout</h5>
         <form id="new-workout-form">
@@ -37,6 +62,12 @@
           <button type="submit">Log Workout</button>
         </form>
       </sec>
+      <button id="show-all">All Workouts</button>
       <sec id="workout-display"></sec>
+      <button id="sign-out">Sign Out</button>
+      <sec id="all-workouts">
+      <h1 >All Workouts Completed</h1>
+      <div id="index-workouts"></div>
+      </sec>
     </body>
 </html>

@@ -15,7 +15,18 @@ const newWorkout = function (data) {
   })
 }
 
+const indexWorkouts = function () {
+  return $.ajax({
+    method: 'GET',
+    url: config.apiUrl + '/workouts',
+    headers: {
+      Authorization: 'Bearer ' + store.user.token
+    }
+  })
+}
+
 module.exports = {
-  newWorkout
+  newWorkout,
+  indexWorkouts
 
 }

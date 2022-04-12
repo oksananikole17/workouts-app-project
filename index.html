@@ -12,6 +12,31 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
-      <h1>Browser Template</h1>
+      <h1>Welcome to Workout Tracker!</h1>
+      <h3>Don't have an Account? Sign Up</h3>
+      <form id="sign-up-form">
+        <input name="credentials[email]" type="email" placeholder="Email">
+        <input name="credentials[password]" type="password" placeholder="Password">
+        <input name="credentials[password_confirmation]" type="password" placeholder="Confirm Password">
+        <button type="submit">Sign Up</button>
+      </form>
+      <sec id="auth-display"></sec>
+      <h3>OR</h3>
+      <h3>Have an Account? Sign In</h3>
+      <form id="sign-in-form">
+        <input name="credentials[email]" type="email" placeholder="Email">
+        <input name="credentials[password]" type="password" placeholder="Password">
+        <button type="submit">Sign In</button>
+      </form>
+      <sec id="workout-home">
+        <h5>Log a New Workout</h5>
+        <form id="new-workout-form">
+          <input name="workouts[type]" type="text" placeholder="Type">
+          <input name="workouts[date]" type="text" placeholder="Date">
+          <input name="workouts[duration]" type="text" placeholder="Time">
+          <button type="submit">Log Workout</button>
+        </form>
+      </sec>
+      <sec id="workout-display"></sec>
     </body>
 </html>

@@ -1,1 +1,25 @@
 @import '~bootstrap/scss/bootstrap';
+
+h1 {
+    font-weight: 300;
+    text-align: center;
+}
+
+h3 {
+    margin: 20px;
+    font-weight: 200;
+}
+ input {
+     display:block;
+     margin:5px;
+ }
+
+ #workout-home {
+     display:block;
+     text-align: center;
+     margin: 10px;
+ }
+
+ #new-workout-form {
+     display: inline-block;
+ }

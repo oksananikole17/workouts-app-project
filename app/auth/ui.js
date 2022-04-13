@@ -16,6 +16,9 @@ const onSignInSuccess = function (response) {
   $('#workout-home').show()
   $('form').trigger('reset')
   $('#sign-out').show()
+  $('#show-all').show()
+  $('#show-workout-form').show()
+
   console.log(response)
   store.user = response.user
 

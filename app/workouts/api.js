@@ -11,7 +11,7 @@ const newWorkout = function (data) {
       Authorization: 'Bearer ' + store.user.token
     },
     data
-    // same as data: data
+
   })
 }
 
@@ -25,8 +25,19 @@ const indexWorkouts = function () {
   })
 }
 
+const showWorkout = function (id) {
+  return $.ajax({
+    method: 'GET',
+    url: config.apiUrl + '/workouts/' + id,
+    headers: {
+      Authorization: 'Bearer ' + store.user.token
+    }
+  })
+}
+
 module.exports = {
   newWorkout,
-  indexWorkouts
+  indexWorkouts,
+  showWorkout
 
 }

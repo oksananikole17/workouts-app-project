@@ -63,7 +63,11 @@
         </form>
       </sec>
       <button id="show-all">All Workouts</button>
-      <sec id="workout-display"></sec>
+        <form id="show-workout-form">
+          <input name="workouts[id]" type="text" placeholder="Workout ID">
+          <button type="submit">Find Workout</button>
+        </form>
+        <div id="find-workout"></div>
       <button id="sign-out">Sign Out</button>
       <sec id="all-workouts">
       <h1 >All Workouts Completed</h1>

@@ -29,13 +29,8 @@ const onIndexWorkoutsSuccess = function (response) {
   let workoutsHtml = ''
 
   workouts.forEach(workouts => {
-    // const workoutsIndex = workoutsArray.indexOf(workouts)
-
-    // // const gameWinner = resultsArray[gameIndex]
-    // console.log(workoutsIndex)
-
     workoutsHtml += `
-                      <div>
+                      <div id=${workouts._id}>
                         <ul>
                         <li>
                         <div> Workout Type: ${workouts.type}</div>
@@ -43,6 +38,13 @@ const onIndexWorkoutsSuccess = function (response) {
                         <div> Time: ${workouts.duration} </div>
                         </li> 
                         </ul>
+                        <form class="workouts-update-dynamic" data-id=${workouts._id}>
+        <input type="text" name="workouts[type]" placeholder="Workout Type Here" required>
+        <input type="text" name="workouts[date]" placeholder="Workout Date Here" required>
+        <input type="text" name="workouts[duration]" placeholder="Workout Time Here" required>
+        <button type="submit">Update Workout</button>
+      </form>
+      <button class="workouts-destroy-dynamic" data-id=${workouts._id}>Delete Workout</button>
                         </div>
                     `
   })
@@ -74,9 +76,52 @@ const onShowWorkoutSuccess = function (response) {
   $('form').trigger('reset')
 }
 
+const onUpdateWorkoutSuccess = function (id, data) {
+  console.log(data)
+  console.log(id)
+  // const element = document.getElementById(id)
+  // element.innerHTML()
+  $('#workout-update-success').html('You successfully updated the workout!')
+
+  // add class for success messaging
+  $('#workout-update-success').addClass('success')
+
+  // use setTimeout to allow the success message o stay for 5 seconds before
+  // the message is replaced with '' and the 'success' class is removed
+  setTimeout(() => {
+    $('#workout-update-success').html('')
+    $('#workout-update-success').removeClass('success')
+  }, 6000)
+
+  // reset all forms
+  $('form').trigger('reset')
+}
+
+const onDestroyWorkoutSuccess = function (id) {
+  console.log(id)
+  const element = document.getElementById(id)
+  console.log(element)
+  element.parentNode.removeChild(element)
+
+  $('#workout-update-success').html('Workout deleted!')
+
+  $('#workout-update-success').addClass('success')
+
+  // use setTimeout to allow the success message to stay for 5 seconds before
+  // the message is replaced with '' and the 'success' class is removed
+  setTimeout(() => {
+    $('#workout-update-success').html('')
+    $('#workout-update-success').removeClass('success')
+  }, 6000)
+
+  // reset all forms
+  $('form').trigger('reset')
+}
 export default {
   onNewWorkoutSuccess,
   onNewWorkoutFailure,
   onIndexWorkoutsSuccess,
-  onShowWorkoutSuccess
+  onShowWorkoutSuccess,
+  onUpdateWorkoutSuccess,
+  onDestroyWorkoutSuccess
 }

@@ -42,8 +42,38 @@ const onShowWorkout = function (event) {
     .showWorkout(data.workouts.id).then(workoutsUi.onShowWorkoutSuccess)
 }
 
+const onDynamicUpdateWorkout = function (event) {
+  event.preventDefault()
+
+  const updateForm = event.target
+  console.log(updateForm)
+
+  const id = $(updateForm).data('id')
+  console.log(id)
+
+  // create a javascript object from the form where the user entered the book
+  // information
+  const data = getFormFields(event.target)
+  console.log(data)
+
+  // make API call to update one book with the data we grabbed from the form
+  workoutsApi
+    .updateWorkout(id, data).then(workoutsUi.onUpdateWorkoutSuccess(id, data))
+}
+
+const onDynamicDestroyWorkout = function (event) {
+  // event.target is the delete button that was clicked on
+  const deleteButton = event.target
+
+  const id = $(deleteButton).data('id')
+
+  // make API call for deleting one book with the data we grabbed from the form
+  workoutsApi.destroyWorkout(id).then(workoutsUi.onDestroyWorkoutSuccess(id))
+}
 module.exports = {
   onNewWorkout,
   onIndexWorkouts,
-  onShowWorkout
+  onShowWorkout,
+  onDynamicUpdateWorkout,
+  onDynamicDestroyWorkout
 }

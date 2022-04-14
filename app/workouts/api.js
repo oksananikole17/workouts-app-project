@@ -35,9 +35,32 @@ const showWorkout = function (id) {
   })
 }
 
+const updateWorkout = function (id, data) {
+  return $.ajax({
+    method: 'PATCH',
+    url: config.apiUrl + '/workouts/' + id,
+    headers: {
+      Authorization: 'Bearer ' + store.user.token
+    },
+    data
+  })
+}
+
+const destroyWorkout = function (id) {
+  return $.ajax({
+    method: 'DELETE',
+    url: config.apiUrl + '/workouts/' + id,
+    headers: {
+      Authorization: 'Bearer ' + store.user.token
+    }
+  })
+}
+
 module.exports = {
   newWorkout,
   indexWorkouts,
-  showWorkout
+  showWorkout,
+  updateWorkout,
+  destroyWorkout
 
 }

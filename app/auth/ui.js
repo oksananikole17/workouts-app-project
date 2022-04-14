@@ -13,11 +13,15 @@ const onSignUpFailure = function () {
 }
 
 const onSignInSuccess = function (response) {
+  $('#auth-home').hide()
   $('#workout-home').show()
   $('form').trigger('reset')
   $('#sign-out').show()
   $('#show-all').show()
   $('#show-workout-form').show()
+  $('body').css('background-color', 'pink')
+  $('#first').hide()
+  $('#second').show()
 
   console.log(response)
   store.user = response.user

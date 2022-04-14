@@ -6,13 +6,16 @@
 
       <!-- Do not add `link` tags-->
       <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
-
+     
       <!-- Do not add `script` tags-->
       <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+
     </head>
     <body>
-      <h1>Welcome to Workout Tracker!</h1>
+      <h1 id="first">Welcome to Workout Tracker!</h1>
+      <h1 id="second"> Welcome to Workout Tracker!</h1>
+      <sec id="auth-home">
       <h3>Don't have an Account? Sign Up</h3>
       <form id="sign-up-form">
         <input name="credentials[email]" type="email" placeholder="Email">
@@ -53,24 +56,28 @@
             </div>
           </div>
         </div>
+      </sec>
       <sec id="workout-home">
         <h5>Log a New Workout</h5>
         <form id="new-workout-form">
           <input name="workouts[type]" type="text" placeholder="Type">
           <input name="workouts[date]" type="text" placeholder="Date">
           <input name="workouts[duration]" type="text" placeholder="Time">
-          <button type="submit">Log Workout</button>
+          <button id="log-wrk" type="submit">Log Workout</button>
         </form>
       </sec>
-      <button id="show-all">All Workouts</button>
+      <sec id="wrk-index">
         <form id="show-workout-form">
           <input name="workouts[id]" type="text" placeholder="Workout ID">
-          <button type="submit">Find Workout</button>
+          <button id="find-wrk" type="submit">Find Workout</button>
         </form>
         <div id="find-workout"></div>
+      <button id="show-all">All Workouts</button>
+      </sec>
       <button id="sign-out">Sign Out</button>
+      <div id="workout-update-success"></div>
       <sec id="all-workouts">
-      <h1 >All Workouts Completed</h1>
+      <h2>All Workouts Completed</h2>
       <div id="index-workouts"></div>
       </sec>
     </body>

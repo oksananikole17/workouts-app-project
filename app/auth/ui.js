@@ -18,8 +18,10 @@ const onSignInSuccess = function (response) {
   $('form').trigger('reset')
   $('#sign-out').show()
   $('#show-all').show()
+  $('#find-modal').show()
+
   $('#show-workout-form').show()
-  $('body').css('background-color', 'pink')
+  $('body').css('background-color', 'rgb(255,192,203,0.7)')
   $('#first').hide()
   $('#second').show()
 

@@ -8,6 +8,7 @@ const workoutEvents = require('./workouts/events.js')
 
 $(() => {
   $('#workout-home').hide()
+  $('#find-modal').hide()
   $('#workout-display').hide()
   $('#show-all').hide()
   $('#sign-out').hide()

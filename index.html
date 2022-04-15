@@ -65,15 +65,32 @@
           <input name="workouts[duration]" type="text" placeholder="Time">
           <button id="log-wrk" type="submit">Log Workout</button>
         </form>
+        <button id="show-all">All Workouts</button>
       </sec>
-      <sec id="wrk-index">
-        <form id="show-workout-form">
-          <input name="workouts[id]" type="text" placeholder="Workout ID">
-          <button id="find-wrk" type="submit">Find Workout</button>
-        </form>
-        <div id="find-workout"></div>
-      <button id="show-all">All Workouts</button>
-      </sec>
+      <sec id="find-modal">
+        <button type="text" class="btn btn-primary findw"  data-bs-toggle="modal" data-bs-target="#exampleMod">Find
+          Workout</button>
+        <div class="modal fade" id="exampleMod" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModLabel">Find Workout</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                  <form id="show-workout-form">
+                    <input name="workouts[id]" type="text" placeholder="Workout ID">
+                <div id="find-workout"></div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button id="find-wrk" type="submit" class="btn btn-primary findw">Find Workout</button>
+                </div>
+               </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        </sec>
       <button id="sign-out">Sign Out</button>
       <div id="workout-update-success"></div>
       <sec id="all-workouts">

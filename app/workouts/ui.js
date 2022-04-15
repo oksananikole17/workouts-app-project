@@ -42,7 +42,7 @@ const onIndexWorkoutsSuccess = function (response) {
         <input type="text" name="workouts[type]" placeholder="Workout Type Here" required>
         <input type="text" name="workouts[date]" placeholder="Workout Date Here" required>
         <input type="text" name="workouts[duration]" placeholder="Workout Time Here" required>
-        <button type="submit">Update Workout</button>
+        <button class="wrk-update-btn" type="submit">Update Workout</button>
       </form>
       <button class="workouts-destroy-dynamic" data-id=${workouts._id}>Delete Workout</button>
                         </div>
@@ -79,8 +79,30 @@ const onShowWorkoutSuccess = function (response) {
 const onUpdateWorkoutSuccess = function (id, data) {
   console.log(data)
   console.log(id)
-  // const element = document.getElementById(id)
-  // element.innerHTML()
+  const element = document.getElementById(id)
+  console.log(element)
+
+  const workoutHtml = `
+                      <div id=${id}>
+                        <ul>
+                        <li>
+                        <div> Workout Type: ${data.workouts.type}</div>
+                        <div> Date: ${data.workouts.date}</div>
+                        <div> Time: ${data.workouts.duration} </div>
+                        </li> 
+                        </ul>
+                        <form class="workouts-update-dynamic" data-id=${id}>
+        <input type="text" name="workouts[type]" placeholder="Workout Type Here" required>
+        <input type="text" name="workouts[date]" placeholder="Workout Date Here" required>
+        <input type="text" name="workouts[duration]" placeholder="Workout Time Here" required>
+        <button type="submit">Update Workout</button>
+      </form>
+      <button class="workouts-destroy-dynamic" data-id=${id}>Delete Workout</button>
+                        </div>
+                    `
+
+  element.innerHTML = workoutHtml
+
   $('#workout-update-success').html('You successfully updated the workout!')
 
   // add class for success messaging

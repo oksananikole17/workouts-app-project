@@ -4,7 +4,7 @@
 $font-family: 'Press Start 2P', cursive;
 
 body {
-    max-width: 800px;
+    max-width: 1200px;
     min-width: 300px;
     padding: 50px;
     margin-left: -20px;
@@ -14,6 +14,7 @@ body {
 h1 {
     font-weight: 300;
     text-align: center;
+    padding: 20px;
 }
 #second {
     font-weight: 100;
@@ -27,6 +28,9 @@ h2 {
 h3 {
     margin: 20px;
     font-weight: 200;
+}
+h5 {
+ color:rgb(114, 79, 117);
 }
  input {
      display:block;
@@ -64,23 +68,46 @@ button {
   #show-workout-form {
      display: inline-block;
  }
- #show-all {
-     margin: 10px;
- }
 
  li {
-    border: 8px dotted rgb(114, 79, 117);
+    border: 8px solid rgb(114, 79, 117);
     color: rgb(114, 79, 117);
+    font-weight: lighter;
+    padding: 10px;
 }
 
-#find-wrk {
-    background-color: #89CFF0;
+.findw {
+    background-color: rgb(114, 79, 117);
+    color: rgb(255,192,203);
+    border: 0 !important;
+}
+.findw:hover{
+    background-color: #89CFF0 !important;
+    border: 10 !important;
+    border-color: rgb(114, 79, 117) !important;
+    outline-color: rgb(114, 79, 117) !important;
+}
+.findw:active {
+    box-shadow: none !important;
+    background-color: #89CFF0!important;
+    border: 0 !important;
+}
+.findw:focus {
+    box-shadow: none !important;
+    background-color:#89CFF0!important;
+    border: 0 !important;
 }
 #log-wrk {
     background-color: #89CFF0;
+    color: rgb(114, 79, 117);
 }
 #show-all {
     background-color: #89CFF0;
+    color:rgb(114, 79, 117);
+    font-family:$font-family;
+    margin:auto;
+    text-align:center;
+    display:flex;
 }
 
 #all-workouts {
@@ -89,6 +116,8 @@ button {
 
 #sign-out {
     font-family: $font-family;
+     background-color: #141414;
+     color:  rgb(255,192,203);
 }
 
 #workout-update-success {
@@ -96,3 +125,29 @@ button {
     margin: 50px;
     text-align: center;
 }
+
+.workouts-destroy-dynamic {
+    background-color: #89CFF0;
+    color: rgb(114, 79, 117);
+}
+.wrk-update-btn {
+    background-color: #89CFF0; 
+    color: rgb(114, 79, 117);
+}
+
+::placeholder {
+    color: rgb(255,192,203);
+}
+
+input[type="email"]::placeholder {
+    color:grey;
+}
+input[type="password"]::placeholder {
+    color:grey;
+}
+ #find-modal {
+     display:block;
+     text-align: center;
+     margin: 10px;
+     font-family: $font-family;
+ }

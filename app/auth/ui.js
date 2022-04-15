@@ -4,6 +4,12 @@ const store = require('../store.js')
 
 const onSignUpSuccess = function () {
   $('#auth-display').html('<p>Account Created!</p>')
+  $('#auth-display').addClass('success')
+
+  setTimeout(() => {
+    $('#auth-display').html('')
+    $('#auth-display').removeClass('success')
+  }, 5000)
 
   $('form').trigger('reset')
 }

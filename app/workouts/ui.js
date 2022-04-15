@@ -8,6 +8,30 @@ const onNewWorkoutSuccess = function (response) {
   $('form').trigger('reset')
   const workouts = response.workouts
   console.log(workouts)
+  const element = document.getElementById('index-workouts')
+  console.log(element)
+
+  const workoutHtml = `
+                      <div id=${workouts._id}>
+                        <ul>
+                        <li>
+                        <div> Workout Type: ${workouts.type}</div>
+                        <div> Date: ${workouts.date}</div>
+                        <div> Time: ${workouts.duration} </div>
+                        </li> 
+                        </ul>
+                        <form class="workouts-update-dynamic" data-id=${workouts._id}>
+        <input type="text" name="workouts[type]" placeholder="Workout Type Here" required>
+        <input type="text" name="workouts[date]" placeholder="Workout Date Here" required>
+        <input type="text" name="workouts[duration]" placeholder="Workout Time Here" required>
+        <button class="wrk-update-btn" type="submit">Update Workout</button>
+      </form>
+      <button class="workouts-destroy-dynamic" data-id=${workouts._id}>Delete Workout</button>
+                        </div>
+                    `
+
+  element.innerHTML += workoutHtml
+
   store.workouts = response.workouts
   workoutsArray.push(store.workouts)
   console.log(workoutsArray)

@@ -80,7 +80,7 @@ const onShowWorkoutSuccess = function (response) {
   // log the information we get back from the API so we know how we can
   // interact with it.
   console.log(response)
-
+  console.log('butt')
   const workoutHtml = `<div>
                         <ul>
                         <li>
@@ -119,7 +119,7 @@ const onUpdateWorkoutSuccess = function (id, data) {
         <input type="text" name="workouts[type]" placeholder="Workout Type Here" required>
         <input type="text" name="workouts[date]" placeholder="Workout Date Here" required>
         <input type="text" name="workouts[duration]" placeholder="Workout Time Here" required>
-        <button type="submit">Update Workout</button>
+        <button class="wrk-update-btn" type="submit">Update Workout</button>
       </form>
       <button class="workouts-destroy-dynamic" data-id=${id}>Delete Workout</button>
                         </div>

@@ -62,7 +62,8 @@ button {
 }
  #sign-out {
      text-align:left;
-     margin: 10px;
+     margin: 5px;
+     border-radius: 5px;
  }
 
  #wrk-index {
@@ -124,6 +125,10 @@ button {
     font-family: $font-family;
      background-color: #141414;
      color:  rgb(255,192,203);
+    border: 0 !important;
+    font-size: 14px;
+    padding: 7px;
+    margin-left: 10px;
 }
 
 #workout-update-success {
@@ -145,15 +150,41 @@ button {
     color: rgb(255,192,203);
 }
 
-input[type="email"]::placeholder {
-    color:grey;
-}
-input[type="password"]::placeholder {
-    color:grey;
-}
+
  #find-modal {
      display:block;
      text-align: center;
      margin: 10px;
      font-family: $font-family;
  }
+
+ .pass {
+     box-shadow: none !important;
+    font-family: $font-family;
+     background-color: #141414;
+     color:  rgb(255,192,203);
+     border: 0 !important;
+     display: block;
+     font-size: 14px;
+    }
+.pass:hover{
+    background-color: #89CFF0 !important;
+    border: 10 !important;
+    border-color: rgb(114, 79, 117) !important;
+    outline-color: rgb(114, 79, 117) !important;
+}
+.pass:active {
+    box-shadow: none !important;
+    background-color: #89CFF0!important;
+    border: 0 !important;
+}
+.pass:focus {
+    box-shadow: none !important;
+    background-color:#89CFF0!important;
+    border: 0 !important;
+}
+
+.auth-btn {
+      background-color: #141414;
+     color:  rgb(255,192,203);
+}

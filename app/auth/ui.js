@@ -25,6 +25,7 @@ const onSignInSuccess = function (response) {
   $('#sign-out').show()
   $('#show-all').show()
   $('#find-modal').show()
+  $('#password').show()
 
   $('#show-workout-form').show()
   $('body').css('background-color', 'rgb(255,192,203,0.7)')
@@ -44,7 +45,9 @@ const onSignInFailure = function () {
 }
 
 const onChangePasswordSuccess = function () {
-  $('#sign-display').html('<p>Password Changed Successfully!</p>')
+  $('#pass-success').html('Password Changed!')
+
+  $('#pass-success').addClass('success')
 
   $('form').trigger('reset')
 }

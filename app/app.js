@@ -13,6 +13,7 @@ $(() => {
   $('#show-all').hide()
   $('#sign-out').hide()
   $('#second').hide()
+  $('#password').hide()
   $('#show-workout-form').hide()
   $('#all-workouts').hide()
   $('#sign-up-form').on('submit', authEvents.onSignUp)

@@ -21,3 +21,7 @@ Welcome to my Workout App! This application is designed to allow you to sign-up 
 * As a new user, I want to sign in so that I can start logging my workouts into the app and track my progress.
 * As a user, I want to be able easily store the important details of my workout like date and duration.
 * As a user, I want to be able to view all the workouts I have tracked and see how consist I have been over the course of a week, month, etc.
+
+## Wireframe
+
+![] (image_67159297 (1).JPG)

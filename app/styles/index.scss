@@ -1,0 +1,190 @@
+@import '~bootstrap/scss/bootstrap';
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+$font-family: 'Press Start 2P', cursive;
+
+body {
+    max-width: 1200px;
+    min-width: 300px;
+    padding: 50px;
+    margin-left: -20px;
+
+}
+
+h1 {
+    font-weight: 300;
+    text-align: center;
+    padding: 20px;
+}
+#second {
+    font-weight: 100;
+    font-family: $font-family;
+}
+h2 {
+    font-weight: 200;
+    text-align: center;
+}
+
+h3 {
+    margin: 20px;
+    font-weight: 200;
+}
+h5 {
+ color:rgb(114, 79, 117);
+}
+ input {
+     display:block;
+     margin:5px;
+ }
+
+ #auth-display {
+     font-size: larger;
+     font-weight: bold;
+     padding:30px;
+ }
+
+ #workout-home {
+     display:block;
+     text-align: center;
+     margin: 10px;
+     font-family: $font-family;
+ }
+
+ #new-workout-form {
+     display: inline-block;
+ }
+
+ .btn {
+     margin: 10px;
+ }
+button {
+    margin: 5px;
+}
+ #sign-out {
+     text-align:left;
+     margin: 5px;
+     border-radius: 5px;
+ }
+
+ #wrk-index {
+     display:block;
+     text-align: center;
+     margin: 8px;
+     font-family: $font-family;
+ }
+  #show-workout-form {
+     display: inline-block;
+ }
+
+ li {
+    border: 8px solid rgb(114, 79, 117);
+    color: rgb(114, 79, 117);
+    font-weight: lighter;
+    padding: 10px;
+}
+
+.findw {
+    background-color: rgb(114, 79, 117);
+    color: rgb(255,192,203);
+    border: 0 !important;
+}
+.findw:hover{
+    background-color: #89CFF0 !important;
+    border: 10 !important;
+    border-color: rgb(114, 79, 117) !important;
+    outline-color: rgb(114, 79, 117) !important;
+}
+.findw:active {
+    box-shadow: none !important;
+    background-color: #89CFF0!important;
+    border: 0 !important;
+}
+.findw:focus {
+    box-shadow: none !important;
+    background-color:#89CFF0!important;
+    border: 0 !important;
+}
+#log-wrk {
+    background-color: #89CFF0;
+    color: rgb(114, 79, 117);
+}
+#show-all {
+    background-color: #89CFF0;
+    color:rgb(114, 79, 117);
+    font-family:$font-family;
+    margin:auto;
+    text-align:center;
+    display:flex;
+}
+
+#all-workouts {
+    font-family: $font-family;
+}
+
+#sign-out {
+    font-family: $font-family;
+     background-color: #141414;
+     color:  rgb(255,192,203);
+    border: 0 !important;
+    font-size: 14px;
+    padding: 7px;
+    margin-left: 10px;
+}
+
+#workout-update-success {
+    font-family: $font-family;
+    margin: 50px;
+    text-align: center;
+}
+
+.workouts-destroy-dynamic {
+    background-color: #89CFF0;
+    color: rgb(114, 79, 117);
+}
+.wrk-update-btn {
+    background-color: #89CFF0; 
+    color: rgb(114, 79, 117);
+}
+
+::placeholder {
+    color: rgb(255,192,203);
+}
+
+
+ #find-modal {
+     display:block;
+     text-align: center;
+     margin: 10px;
+     font-family: $font-family;
+ }
+
+ .pass {
+     box-shadow: none !important;
+    font-family: $font-family;
+     background-color: #141414;
+     color:  rgb(255,192,203);
+     border: 0 !important;
+     display: block;
+     font-size: 14px;
+    }
+.pass:hover{
+    background-color: #89CFF0 !important;
+    border: 10 !important;
+    border-color: rgb(114, 79, 117) !important;
+    outline-color: rgb(114, 79, 117) !important;
+}
+.pass:active {
+    box-shadow: none !important;
+    background-color: #89CFF0!important;
+    border: 0 !important;
+}
+.pass:focus {
+    box-shadow: none !important;
+    background-color:#89CFF0!important;
+    border: 0 !important;
+}
+
+.auth-btn {
+      background-color: #141414;
+     color:  rgb(255,192,203);
+}

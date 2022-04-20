@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Example</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <!-- Do not add `link` tags-->
+      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+     
+      <!-- Do not add `script` tags-->
+      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+
+    </head>
+    <body>
+      <h1 id="first">Welcome to Workout Tracker!</h1>
+      <h1 id="second"> Welcome to Workout Tracker!</h1>
+      <sec id="auth-home">
+      <h3>Don't have an Account? Sign Up</h3>
+      <form id="sign-up-form">
+        <input name="credentials[email]" type="email" placeholder="Email">
+        <input name="credentials[password]" type="password" placeholder="Password">
+        <input name="credentials[password_confirmation]" type="password" placeholder="Confirm Password">
+        <button class="auth-btn" type="submit">Sign Up</button>
+      </form>
+      <sec id="auth-display"></sec>
+      <h3>OR</h3>
+      <h3>Have an Account? Sign In</h3>
+      <form id="sign-in-form">
+        <input name="credentials[email]" type="email" placeholder="Email">
+        <input name="credentials[password]" type="password" placeholder="Password">
+        <button class="auth-btn" type="submit">Sign In</button>
+      </form>
+      </sec>
+      <sec id="workout-home">
+        <h5>Log a New Workout</h5>
+        <form id="new-workout-form">
+          <input name="workouts[type]" type="text" placeholder="Type">
+          <input name="workouts[date]" type="text" placeholder="Date">
+          <input name="workouts[duration]" type="text" placeholder="Time">
+          <button id="log-wrk" type="submit">Log Workout</button>
+        </form>
+        <button id="show-all">All Workouts</button>
+      </sec>
+      <sec id="find-modal">
+        <button type="text" class="btn btn-primary findw"  data-bs-toggle="modal" data-bs-target="#exampleMod">Find
+          Workout</button>
+        <div class="modal fade" id="exampleMod" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModLabel">Find Workout</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                  <form id="show-workout-form">
+                    <input name="workouts[id]" type="text" placeholder="Workout ID">
+                <div id="find-workout"></div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button id="find-wrk" type="submit" class="btn btn-primary findw">Find Workout</button>
+                </div>
+               </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        </sec>
+        <sec id="password">
+            <button type="button" class="btn btn-primary pass" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              Change Password
+            </button>
+            
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Change Your Password</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <form id="password-form">
+                      <input name="passwords[old]" type="password" placeholder="Old Password">
+                      <input name="passwords[new]" type="password" placeholder="New Password">
+                      <div id="pass-success"></div>
+            
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary pass">Change Password</button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </sec>
+      <button id="sign-out">Sign Out</button>
+      <div id="workout-update-success"></div>
+      <sec id="all-workouts">
+      <h2>All Workouts Completed</h2>
+      <div id="index-workouts"></div>
+      </sec>
+    </body>
+</html>

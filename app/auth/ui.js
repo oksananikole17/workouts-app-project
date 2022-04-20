@@ -71,6 +71,8 @@ const onSignOutSuccess = function () {
   $('#first').show()
   $('#second').hide()
   $('#show-workout-form').hide()
+  $('body').css('background-color', 'white')
+  $('#all-workouts').hide()
 }
 
 export default {

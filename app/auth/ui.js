@@ -32,14 +32,13 @@ const onSignInSuccess = function (response) {
   $('#first').hide()
   $('#second').show()
 
-  console.log(response)
   store.user = response.user
 
   return true
 }
 
 const onSignInFailure = function () {
-  $('#sign-display').html('<p>Fail</p>')
+  $('#auth-display').html('<p>Sign In Failed</p>')
 
   $('form').trigger('reset')
 }
@@ -53,12 +52,19 @@ const onChangePasswordSuccess = function () {
 }
 
 const onChangePasswordFailure = function () {
-  $('#sign-display').html('<p>Fail</p>')
+  $('#pass-success').html('Password Change Failed')
 }
 
 const onSignOutSuccess = function () {
-  console.log('byyeeeee')
-  location.reload()
+  $('#auth-home').show()
+  $('#workout-home').hide()
+  $('#sign-out').hide()
+  $('#show-all').hide()
+  $('#find-modal').hide()
+  $('#password').hide()
+  $('#first').show()
+  $('#second').hide()
+  $('#show-workout-form').hide()
 }
 
 export default {

@@ -11,7 +11,6 @@ const onSignUp = function (event) {
   // get data from form
   const form = event.target
   const data = getFormFields(form)
-  console.log(data)
 
   authApi
     .signUp(data)
@@ -21,12 +20,10 @@ const onSignUp = function (event) {
 
 const onSignIn = function (event) {
   event.preventDefault()
-  console.log('now')
 
   // get data from form
   const form = event.target
   const data = getFormFields(form)
-  console.log(data)
 
   // api call
   authApi
@@ -37,12 +34,10 @@ const onSignIn = function (event) {
 
 const onChangePassword = function (event) {
   event.preventDefault()
-  console.log('yuh')
 
   // get data from form
   const form = event.target
   const data = getFormFields(form)
-  console.log(data)
 
   // api call
   authApi

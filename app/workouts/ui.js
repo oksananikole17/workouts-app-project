@@ -46,7 +46,6 @@ const onNewWorkoutFailure = function () {
 const onIndexWorkoutsSuccess = function (response) {
   $('#all-workouts').show()
   const workouts = response.workouts
-  console.log(response)
   // console.log(workoutsArray)
 
   // eslint-disable-next-line no-unused-vars
@@ -79,8 +78,6 @@ const onIndexWorkoutsSuccess = function (response) {
 const onShowWorkoutSuccess = function (response) {
   // log the information we get back from the API so we know how we can
   // interact with it.
-  console.log(response)
-  console.log('butt')
   const workoutHtml = `<div>
                         <ul>
                         <li>
@@ -101,10 +98,7 @@ const onShowWorkoutSuccess = function (response) {
 }
 
 const onUpdateWorkoutSuccess = function (id, data) {
-  console.log(data)
-  console.log(id)
   const element = document.getElementById(id)
-  console.log(element)
 
   const workoutHtml = `
                       <div id=${id}>
@@ -144,9 +138,7 @@ const onUpdateWorkoutSuccess = function (id, data) {
 }
 
 const onDestroyWorkoutSuccess = function (id) {
-  console.log(id)
   const element = document.getElementById(id)
-  console.log(element)
   element.parentNode.removeChild(element)
 
   $('#workout-update-success').html('Workout deleted!')

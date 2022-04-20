@@ -6,12 +6,10 @@ const getFormFields = require('../../lib/get-form-fields.js')
 
 const onNewWorkout = function (event) {
   event.preventDefault()
-  console.log('pls')
 
   // get data from form
   const form = event.target
   const data = getFormFields(form)
-  console.log(data)
 
   workoutsApi
     .newWorkout(data)
@@ -21,7 +19,6 @@ const onNewWorkout = function (event) {
 
 const onIndexWorkouts = function (event) {
   event.preventDefault()
-  console.log('i am dying')
 
   // api call
   workoutsApi
@@ -35,7 +32,6 @@ const onShowWorkout = function (event) {
   // create a javascript object from the form (event.target) where the user entered the book id
   const form = event.target
   const data = getFormFields(form)
-  console.log(data)
 
   // make API call for getting one book with the id of the book we grabbed from the form
   workoutsApi
@@ -46,15 +42,12 @@ const onDynamicUpdateWorkout = function (event) {
   event.preventDefault()
 
   const updateForm = event.target
-  console.log(updateForm)
 
   const id = $(updateForm).data('id')
-  console.log(id)
 
   // create a javascript object from the form where the user entered the book
   // information
   const data = getFormFields(event.target)
-  console.log(data)
 
   // make API call to update one book with the data we grabbed from the form
   workoutsApi

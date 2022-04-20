@@ -39,6 +39,12 @@ const onSignInSuccess = function (response) {
 
 const onSignInFailure = function () {
   $('#auth-display').html('<p>Sign In Failed</p>')
+  $('#auth-display').addClass('failure')
+
+  setTimeout(() => {
+    $('#auth-display').html('')
+    $('#auth-display').removeClass('failure')
+  }, 5000)
 
   $('form').trigger('reset')
 }

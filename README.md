@@ -24,4 +24,4 @@ Welcome to my Workout App! This application is designed to allow you to sign-up 
 
 ## Wireframe
 
-![] (image_67159297 (1).JPG)
+(https://i.imgur.com/Ty1Y52o.jpg)

@@ -6,7 +6,6 @@ const authUi = require('./ui.js').default
 
 const onSignUp = function (event) {
   event.preventDefault()
-  console.log('now here')
 
   // get data from form
   const form = event.target
